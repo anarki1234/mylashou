@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical" >
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/location_city_bg"
+        android:padding="3.0dip"
+        android:text="定位城市"
+        android:textColor="@color/gray"
+        android:textSize="18.0sp" />
+
+    <TextView
+        android:id="@+id/tv_location_city"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:drawableLeft="@drawable/location_arrow"
+        android:ellipsize="marquee"
+        android:gravity="center_vertical"
+        android:paddingBottom="5.0dip"
+        android:paddingLeft="12.0dip"
+        android:paddingTop="5.0dip"
+        android:text="正在定位中..."
+        android:textAppearance="?android:textAppearanceLarge"
+        android:textColor="@color/black" />
+
+</LinearLayout>

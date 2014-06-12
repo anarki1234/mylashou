@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:background="@color/app_white"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/top_bg_n"
+        android:gravity="center_vertical" >
+
+        <TextView
+            android:id="@+id/nearby_title"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:background="@drawable/btn_activate_bg"
+            android:gravity="center_vertical"
+            android:text="附近"
+            android:textColor="@color/white"
+            android:textSize="20sp" />
+    </LinearLayout>
+
+    <include layout="@layout/layout_location_bar" />
+
+    <GridView
+        android:id="@+id/nearby_grid_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:horizontalSpacing="20dp"
+        android:listSelector="#00000000"
+        android:numColumns="3"
+        android:padding="20dp"
+        android:verticalSpacing="20dp" >
+    </GridView>
+
+</LinearLayout>

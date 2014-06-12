@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/app_white"
+    android:gravity="center"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/top_bg_n"
+        android:gravity="center_vertical" >
+
+        <TextView
+            android:id="@+id/nearby_back"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:background="@drawable/btn_activate_bg"
+            android:drawableLeft="@drawable/back"
+            android:gravity="center_vertical"
+            android:text="附近列表"
+            android:textColor="@color/white"
+            android:textSize="18sp" />
+
+        <View
+            android:layout_width="wrap_content"
+            android:layout_height="1dp"
+            android:layout_weight="1" />
+
+        <ImageView
+            android:id="@+id/home_map"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:background="@drawable/btn_activate_bg"
+            android:padding="10dp"
+            android:src="@drawable/home_icon_map" />
+    </LinearLayout>
+
+    <include layout="@layout/layout_location_bar" />
+
+    <com.handmark.pulltorefresh.library.PullToRefreshListView
+        android:id="@+id/goods_list_view"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" >
+    </com.handmark.pulltorefresh.library.PullToRefreshListView>
+
+</LinearLayout>

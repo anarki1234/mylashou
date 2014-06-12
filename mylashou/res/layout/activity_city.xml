@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <LinearLayout
+        android:id="@+id/top_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/top_bg_n"
+        android:gravity="center_vertical" >
+
+        <TextView
+            android:id="@+id/city_back"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:background="@drawable/btn_activate_bg"
+            android:drawableLeft="@drawable/back"
+            android:gravity="center_vertical"
+            android:text="选择城市"
+            android:textColor="@color/white"
+            android:textSize="18sp" />
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:layout_weight="1" />
+
+        <ImageView
+            android:id="@+id/city_refresh"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:background="@drawable/btn_activate_bg"
+            android:padding="10dp"
+            android:src="@drawable/map_refresh" />
+    </LinearLayout>
+
+    <ListView
+        android:id="@+id/city_list"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/top_bar" >
+    </ListView>
+
+    <com.anjoyo.lashou.widget.SideBar
+        android:id="@+id/side_bar"
+        android:layout_width="30dp"
+        android:layout_height="fill_parent"
+        android:layout_alignParentRight="true"
+        android:layout_alignTop="@+id/city_list" />
+
+</RelativeLayout>

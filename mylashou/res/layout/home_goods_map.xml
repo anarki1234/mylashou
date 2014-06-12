@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:panel="http://schemas.android.com/apk/res/com.lashou.groupurchasing"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/white" >
+
+    <com.amap.api.maps.MapView
+        android:id="@+id/homeMap"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" />
+<ImageView
+        android:id="@+id/backImg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="20.0dip"
+        android:background="@drawable/btn_select"
+        android:paddingBottom="10.0dip"
+        android:paddingLeft="20.0dip"
+        android:paddingRight="20.0dip"
+        android:paddingTop="10.0dip"
+        android:src="@drawable/back" />
+
+    <ImageView
+        android:id="@+id/refreshImg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="right"
+        android:layout_margin="20.0dip"
+        android:background="@drawable/btn_select"
+        android:padding="10.0dip"
+        android:src="@drawable/map_refresh" />
+
+    <ImageView
+        android:id="@+id/locationImg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|right|center"
+        android:layout_margin="20.0dip"
+        android:background="@drawable/btn_select"
+        android:padding="10.0dip"
+        android:src="@drawable/location" />
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:orientation="vertical" >
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_weight="4.0" />
+
+        <LinearLayout
+            android:id="@+id/leftPanel1"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_gravity="bottom|left|center"
+            android:layout_weight="1.0"
+            android:visibility="gone"
+            >
+
+            <FrameLayout
+                android:id="@+id/handle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:layout_marginBottom="20.0dip"
+                android:background="@color/light_transparent"
+                android:paddingBottom="10.0dip"
+                android:paddingLeft="20.0dip"
+                android:paddingRight="20.0dip"
+                android:paddingTop="10.0dip" >
+
+                <ImageView
+                    android:id="@+id/handleImg"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:src="@drawable/close"
+                    android:visibility="gone" />
+
+                <TextView
+                    android:id="@+id/handelTv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:textColor="@color/app_white" />
+            </FrameLayout>
+
+            <LinearLayout
+                android:id="@+id/content"
+                android:layout_width="100.0dip"
+                android:layout_height="fill_parent"
+                android:background="@color/light_transparent" >
+
+                <ListView
+                    android:id="@+id/home_map_listView"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:cacheColorHint="#00000000"
+                    android:divider="@null"
+                    android:dividerHeight="8.0dip"
+                    android:padding="3.0dip"
+                    android:scrollbars="none" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/loadingFram"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:background="@color/light_transparent"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:paddingBottom="10.0dip"
+        android:paddingLeft="5.0dip"
+        android:paddingRight="5.0dip"
+        android:paddingTop="10.0dip" >
+
+        <ImageView
+            android:id="@+id/loadingImg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:src="@drawable/map_refresh" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="正在加载..." />
+    </LinearLayout>
+
+</FrameLayout>
