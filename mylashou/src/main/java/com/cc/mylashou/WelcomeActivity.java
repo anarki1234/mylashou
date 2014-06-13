@@ -1,15 +1,15 @@
 package com.cc.mylashou;
 
-import com.cc.mylashou.util.ToolKits;
-
-import roboguice.activity.RoboActivity;
+import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Handler.Callback;
 import android.os.Message;
 
-public class WelcomeActivity extends RoboActivity {
+import com.cc.mylashou.util.ToolKits;
+
+public class WelcomeActivity extends Activity {
 
 	//是否第一次使用这个app
 	public static final String IS_FIRST = "is_first";

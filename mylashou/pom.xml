@@ -23,11 +23,25 @@
 			<scope>provided</scope>
 		</dependency>
 
+		<!-- 
 		<dependency>
 			<groupId>org.roboguice</groupId>
 			<artifactId>roboguice</artifactId>
 			<version>2.0</version>
 		</dependency>
+		 -->
+		<dependency>
+			<groupId>com.squareup.picasso</groupId>
+			<artifactId>picasso</artifactId>
+			<version>2.3.2</version>
+		</dependency>
+
+		<dependency>
+			<groupId>com.squareup.okhttp</groupId>
+			<artifactId>okhttp</artifactId>
+			<version>2.0.0-RC1</version>
+		</dependency>
+
 
 		<dependency>
 			<groupId>com.google.android</groupId>

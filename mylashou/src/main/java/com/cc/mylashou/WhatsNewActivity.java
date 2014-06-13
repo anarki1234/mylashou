@@ -3,9 +3,7 @@ package com.cc.mylashou;
 import java.util.ArrayList;
 import java.util.List;
 
-import roboguice.activity.RoboActivity;
-import roboguice.inject.InjectView;
-import adapter.GuideAdapter;
+import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.view.ViewPager;
@@ -15,15 +13,21 @@ import android.view.View.OnClickListener;
 import android.widget.Button;
 import android.widget.ImageView;
 
-public class WhatsNewActivity extends RoboActivity {
+import com.cc.mylashou.adapter.GuideAdapter;
+import com.lidroid.xutils.ViewUtils;
+import com.lidroid.xutils.view.annotation.ViewInject;
+
+public class WhatsNewActivity extends Activity {
 	
-	@InjectView(R.id.start_btn) Button btnStart;
-	@InjectView(R.id.view_pager) ViewPager pager;
+	@ViewInject(R.id.start_btn) Button btnStart;
+	@ViewInject(R.id.view_pager) ViewPager pager;
 	
 	@Override
 	public void onCreate(Bundle savedInstanceState){
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_whats_new);
+		//进行注入
+		ViewUtils.inject(this);
 		
 		btnStart.setOnClickListener(new OnClickListener() {
 			public void onClick(View v) {
